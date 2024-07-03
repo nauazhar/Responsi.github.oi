@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buku Murah - Pesan Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pesan.html">Pesan Buku</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Pesan Buku</h2>
+        <form action="save_order.php" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="book">Buku:</label>
+            <input type="text" id="book" name="book" required>
+            <label for="date">Tanggal Sewa:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Pesan</button>
+        </form>
+    </main>
+</body>
+</html>

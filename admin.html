@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buku Murah - Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pesan.html">Pesan Buku</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Data Pesanan</h2>
+        <pre id="order-data">
+        </pre>
+    </main>
+    <script>
+        fetch('pesanan.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('order-data').textContent = data;
+            });
+    </script>
+</body>
+</html>
